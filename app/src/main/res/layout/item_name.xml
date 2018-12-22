@@ -19,12 +19,12 @@
 
         <TextView
             android:id="@+id/item_name_textView"
-            android:layout_width="181dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
+            android:layout_width="328dp"
+            android:layout_height="58dp"
             android:layout_gravity="center_vertical"
-            tools:text="Nom de mon utilisateur"
-            android:textSize="20sp" />
+            android:layout_marginLeft="16dp"
+            android:textSize="20sp"
+            tools:text="Nom de mon utilisateur" />
     </android.support.v7.widget.CardView>
 
 </android.support.constraint.ConstraintLayout>
