@@ -2,4 +2,6 @@
     <string name="app_name">FISE3-ProjetAndroid</string>
     <string name="activity_main_button_edit">Edit</string>
     <string name="activity_main_textView_name">Name</string>
+    <string name="activity_form_button_save">Save</string>
+    <string name="activity_form_editText_name">Name</string>
 </resources>
