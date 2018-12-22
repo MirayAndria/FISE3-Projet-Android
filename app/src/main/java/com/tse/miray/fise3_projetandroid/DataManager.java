@@ -25,10 +25,6 @@ public class DataManager {
         return nameList;
     }
 
-    public void setNameList(List<String> nameList) {
-        this.nameList = nameList;
-    }
-
     public void addItem(String name)
     {
         nameList.add(name);

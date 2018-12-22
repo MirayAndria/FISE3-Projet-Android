@@ -18,10 +18,10 @@ public class FormActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form);
-        init();
+        initViews();
     }
 
-    private void init()
+    private void initViews()
     {
         buttonValidate = findViewById(R.id.activity_form_button_save);
         editTextName = findViewById(R.id.activity_form_editText_name);
@@ -47,7 +47,7 @@ public class FormActivity extends AppCompatActivity implements View.OnClickListe
         }
         else
         {
-            Toast.makeText(this,"Veuillez saisir votre nom",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Please enter your name",Toast.LENGTH_SHORT).show();
         }
         finish();
     }

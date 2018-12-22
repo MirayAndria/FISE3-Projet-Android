@@ -68,27 +68,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         nameListAdapter.updateList(DataManager.getInstance().getNameList());
     }
 
-    /*  Bad code
-  @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == 1)
-        {
-            if (resultCode == RESULT_OK && data.getExtras() != null)
-            {
-                Bundle args = data.getExtras();
-                String name = args.getString("USERNAME");
-                textViewName.setText(name);
-                Log.d("Username", name);
-            }
-            else
-            {
-                //handle error
-
-            }
-        }
-    }
-    */
-
 }
 
