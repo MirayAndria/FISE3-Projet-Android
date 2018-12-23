@@ -5,4 +5,5 @@
     <string name="activity_main_textView_name">Name</string>
     <string name="activity_form_button_save">Save</string>
     <string name="activity_form_editText_name">Name</string>
+    <string name="item_name_button_remove">x</string>
 </resources>

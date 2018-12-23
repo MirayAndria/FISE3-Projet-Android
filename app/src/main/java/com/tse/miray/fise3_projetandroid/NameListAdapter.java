@@ -42,4 +42,11 @@ public class NameListAdapter extends RecyclerView.Adapter<NameViewHolder> {
         this.nameList.addAll(nameList);
         notifyDataSetChanged();
     }
+
+    public void removeItem(List<String> nameList, String name)
+    {
+        int indexOfName = DataManager.getInstance().getNameList().indexOf(name);
+        DataManager.getInstance().getNameList().remove(indexOfName);
+        updateList(nameList);
+    }
 }

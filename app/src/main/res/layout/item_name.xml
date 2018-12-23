@@ -6,8 +6,9 @@
     android:layout_height="100dp">
 
     <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="85dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -15,16 +16,29 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/item_name_textView"
-            android:layout_width="328dp"
+            android:layout_width="260dp"
             android:layout_height="58dp"
-            android:layout_gravity="center_vertical"
+            android:layout_gravity="left|center_vertical"
             android:layout_marginLeft="16dp"
             android:textSize="20sp"
-            tools:text="Nom de mon utilisateur" />
+            tools:text="Name of a user" />
+
+        <Button
+            android:id="@+id/item_name_button_remove"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="16dp"
+            android:backgroundTint="#e7b22222"
+            android:onClick="deleteRow"
+            android:text="@string/item_name_button_remove"
+            android:textColor="#FFFFFF" />
     </android.support.v7.widget.CardView>
+
+
 
 </android.support.constraint.ConstraintLayout>

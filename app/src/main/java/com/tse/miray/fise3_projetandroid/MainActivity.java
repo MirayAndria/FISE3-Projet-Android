@@ -5,12 +5,15 @@ import android.provider.ContactsContract;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewParent;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.NameList;
 
@@ -68,5 +71,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         nameListAdapter.updateList(DataManager.getInstance().getNameList());
     }
 
+    public void deleteRow(View view)
+    {
+        Button buttonRemove;
+        buttonRemove = (Button)view;
+        CardView cardView =(CardView) buttonRemove.getParent();
+        TextView textView = (TextView) cardView.getChildAt(0);
+        String name = textView.getText().toString();
+
+        nameListAdapter.removeItem(DataManager.getInstance().getNameList(),name);
+
+        Toast.makeText(this,name + " removed",Toast.LENGTH_SHORT).show();
+    }
 }
 
