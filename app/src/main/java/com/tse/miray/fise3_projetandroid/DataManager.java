@@ -3,6 +3,9 @@ package com.tse.miray.fise3_projetandroid;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+    Singleton "database" of the names
+ */
 public class DataManager {
     private static DataManager INSTANCE;
     private List<String> nameList;

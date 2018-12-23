@@ -17,6 +17,10 @@ import android.widget.Toast;
 
 import org.w3c.dom.NameList;
 
+/*
+    Main activity : shows a list of names
+    Click on the Edit button to edit the list i.e. to add a name in the list
+ */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button buttonEdition;
@@ -73,11 +77,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void deleteRow(View view)
     {
-        Button buttonRemove;
-        buttonRemove = (Button)view;
-        CardView cardView =(CardView) buttonRemove.getParent();
-        TextView textView = (TextView) cardView.getChildAt(0);
-        String name = textView.getText().toString();
+        Button buttonRemove = (Button)view;
+        CardView parentCardView =(CardView) buttonRemove.getParent();
+        TextView textViewName = (TextView) parentCardView.getChildAt(0);
+        String name = textViewName.getText().toString();
 
         nameListAdapter.removeItem(DataManager.getInstance().getNameList(),name);
 

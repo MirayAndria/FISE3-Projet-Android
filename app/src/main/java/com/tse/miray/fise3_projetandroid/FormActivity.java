@@ -9,6 +9,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/*
+    Form to add a name in the list.
+    The button Save add the name entered, if any, in the list
+    The button Cancel returns to the main activity
+ */
 public class FormActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button buttonValidate;
