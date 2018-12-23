@@ -12,6 +12,7 @@ import android.widget.Toast;
 public class FormActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button buttonValidate;
+    Button buttonCancel;
     EditText editTextName;
 
     @Override
@@ -24,8 +25,10 @@ public class FormActivity extends AppCompatActivity implements View.OnClickListe
     private void initViews()
     {
         buttonValidate = findViewById(R.id.activity_form_button_save);
+        buttonCancel = findViewById(R.id.activity_form_button_cancel);
         editTextName = findViewById(R.id.activity_form_editText_name);
         buttonValidate.setOnClickListener(this);
+        buttonCancel.setOnClickListener(this);
     }
 
     @Override
@@ -34,6 +37,9 @@ public class FormActivity extends AppCompatActivity implements View.OnClickListe
         {
             case R.id.activity_form_button_save:
                 saveData();
+                break;
+            case R.id.activity_form_button_cancel:
+                finish();
                 break;
         }
     }
@@ -44,11 +50,11 @@ public class FormActivity extends AppCompatActivity implements View.OnClickListe
         if(!name.isEmpty())
         {
             DataManager.getInstance().addItem(name);
+            finish();
         }
         else
         {
             Toast.makeText(this,"Please enter your name",Toast.LENGTH_SHORT).show();
         }
-        finish();
     }
 }
